@@ -68,7 +68,7 @@ services:
     depends_on:
       - web
     networks:
-      - proxy
+      - proxynet
 
   web:
     environment:
@@ -88,8 +88,8 @@ services:
 
     command: "./docker/prod/web"
     networks:
-      - frontend
-      - backend
+      - proxynet
+      - internal
     depends_on:
       - db
       - cache
