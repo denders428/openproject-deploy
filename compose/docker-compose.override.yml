@@ -52,7 +52,7 @@ services:
 
   cache:
     image: memcached
-    restart: unless stopped
+    restart: unless-stopped
     networks:
       - internal
 
