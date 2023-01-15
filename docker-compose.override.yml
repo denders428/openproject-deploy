@@ -178,6 +178,5 @@ services:
     volumes:
       - "op-opdata:/var/openproject/assets"
     command: "./docker/prod/seeder"
-    restart: on-failure
     networks:
       - internal
